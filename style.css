@@ -85,3 +85,27 @@ footer {
     margin-top: 60px;
     padding-bottom: 40px;
 }
+
+body.dark {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+body.dark header,
+body.dark .project {
+    background-color: #1e1e1e;
+    border-color: #333;
+}
+
+body.dark h2,
+body.dark .project h3,
+body.dark a,
+body.dark header h1,
+body.dark header p {
+    color: #bb86fc;
+}
+
+body.dark ul li {
+    background-color: #2a2a2a;
+    color: #bb86fc;
+}
