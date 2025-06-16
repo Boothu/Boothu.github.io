@@ -71,6 +71,14 @@
         <p>&copy; 2025 Declan Booth</p>
     </footer>
 
+    <script>
+        if (localStorage.darkMode === "true") document.body.classList.add("dark");
+        document.querySelector("header button").onclick = function () {
+            document.body.classList.toggle("dark");
+            localStorage.darkMode = document.body.classList.contains("dark");
+        };
+    </script>
+
 </body>
 
 </html>
