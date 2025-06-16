@@ -63,6 +63,22 @@ h2 {
     text-decoration: underline;
 }
 
+.project ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.project ul li {
+    display: inline-block;
+    background-color: #e9ddf9;
+    color: #6a0dad;
+    margin: 3.5px;
+    padding: 5px 12px;
+    border-radius: 18px;
+    font-size: 0.9rem;
+}
+
 ul {
     list-style: none;
     padding: 0;
