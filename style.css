@@ -14,6 +14,20 @@ header {
     border-bottom: 2px solid #e2d9f3;
 }
 
+button {
+    padding: 5px 12px;
+    font-size: 0.85rem;
+    background: #6a0dad;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #5a0c9d;
+}
+
 header h1 {
     font-size: 2.5rem;
     margin-bottom: 0.25rem;
@@ -124,4 +138,13 @@ body.dark header p {
 body.dark ul li {
     background-color: #2a2a2a;
     color: #bb86fc;
+}
+
+body.dark button {
+    background: #bb86fc;
+    color: #000000;
+}
+
+body.dark button:hover {
+    background: #9b67e6;
 }
