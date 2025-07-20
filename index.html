@@ -52,7 +52,7 @@
             </ul>
             <p><strong>Built with:</strong> HTML, CSS, JavaScript</p>
             <p><strong>Preview:</strong></p>
-            <img src="images/ST PREVIEW.png" alt="StudyTrack Preview" width="100%">
+            <img src="images/ST PREVIEW.png" alt="StudyTrack Preview" id="studytrack-preview">
             <a href="https://github.com/Boothu/StudyTrack" target="_blank">View Code</a>
         </div>
     </section>
@@ -80,10 +80,24 @@
     </footer>
 
     <script>
+        const previewImg = document.getElementById("studytrack-preview");
+        const lightPreview = "images/ST PREVIEW.png";
+        const darkPreview = "images/ST PREVIEW DARK.png"; 
+
+        function updatePreviewImage() {
+            if (document.body.classList.contains("dark")) {
+                previewImg.src = darkPreview;
+            } else {
+                previewImg.src = lightPreview;
+            }
+        }
+
         if (localStorage.darkMode === "true") document.body.classList.add("dark");
+        updatePreviewImage();
         document.querySelector("header button").onclick = function () {
             document.body.classList.toggle("dark");
             localStorage.darkMode = document.body.classList.contains("dark");
+            updatePreviewImage();
         };
     </script>
 
