@@ -60,13 +60,22 @@
             <p>A Java Spring Boot REST API for tracking personal expenses and budgets.</p>
             <p><strong>Key Features:</strong></p>
             <ul>
-                <li>Full CRUD operations</li>
-                <li>Total spending calculation</li>
-                <li>Input validation</li>
+                <li>CRUD operations for expenses & budgets</li>
+                <li>Monthly budget usage & overview</li>
+                <li>Total spending & remaining budget calculation</li>
+                <li>Input validation & error handling</li>
             </ul>
             <p><strong>Built with:</strong> Java, Spring Boot, JPA, H2, REST</p>
-            <!-- <p><strong>Preview:</strong></p>
-            <img src="" alt="" id=""> -->
+            <div class="carousel">
+                <img src="images/BT PREVIEW 1.png" class="carousel-slide active">
+                <img src="images/BT PREVIEW 2.png" class="carousel-slide">
+                <img src="images/BT PREVIEW 3.png" class="carousel-slide">
+                <img src="images/BT PREVIEW 4.png" class="carousel-slide">
+                <div class="carousel-controls">
+                    <button onclick="changeSlide(-1)">&#10094;</button>
+                    <button onclick="changeSlide(1)">&#10095;</button>
+                </div>
+            </div>
             <a href="https://github.com/Boothu/budget-tracker-api" target="_blank">View Code</a>
         </div>
     </section>
@@ -96,7 +105,7 @@
     <script>
         const previewImg = document.getElementById("studytrack-preview");
         const lightPreview = "images/ST PREVIEW.png";
-        const darkPreview = "images/ST PREVIEW DARK.png"; 
+        const darkPreview = "images/ST PREVIEW DARK.png";
 
         function updatePreviewImage() {
             if (document.body.classList.contains("dark")) {
@@ -113,6 +122,15 @@
             localStorage.darkMode = document.body.classList.contains("dark");
             updatePreviewImage();
         };
+
+        let slideIndex = 0;
+        const slides = document.getElementsByClassName("carousel-slide");
+
+        function changeSlide(n) {
+            slides[slideIndex].style.display = "none";
+            slideIndex = (slideIndex + n + slides.length) % slides.length;
+            slides[slideIndex].style.display = "block";
+        }
     </script>
 
 </body>
