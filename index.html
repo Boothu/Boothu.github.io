@@ -53,7 +53,9 @@
             <p><strong>Built with:</strong> HTML, CSS, JavaScript</p>
             <p><strong>Preview:</strong></p>
             <img src="images/ST PREVIEW.png" alt="StudyTrack Preview" id="studytrack-preview">
-            <a href="https://github.com/Boothu/StudyTrack" target="_blank">View Code</a>
+            <a href="https://github.com/Boothu/StudyTrack" target="_blank">View Code</a><br>
+            <a href="https://boothu.github.io/StudyTrack/" target="_blank">Live Site</a>
+
         </div>
         <div class="project">
             <h3>Budget Tracker</h3>
@@ -113,6 +115,10 @@
             } else {
                 previewImg.src = lightPreview;
             }
+        }
+
+        if (localStorage.darkMode !== "true" && localStorage.darkMode !== "false") {
+            localStorage.darkMode = "true";
         }
 
         if (localStorage.darkMode === "true") document.body.classList.add("dark");
