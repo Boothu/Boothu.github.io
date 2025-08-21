@@ -116,6 +116,19 @@ h2 {
     display: none;
 }
 
+@media (max-width: 768px) {
+    .project img.carousel-slide {
+        height: auto;
+        max-width: 100%;
+        object-fit: contain;
+    }
+
+    .carousel {
+        max-width: 100%;
+        overflow: hidden;
+    }
+}
+
 .project img.carousel-slide.active {
     display: block;
 }
